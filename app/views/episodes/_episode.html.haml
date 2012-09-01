@@ -1,0 +1,13 @@
+.episode
+	.row
+		.span4
+			.meta
+				%h2= link_to episode.name, episode
+				%strong.time= simple_date episode.created_at
+				.description
+					:markdown
+						#{episode.description}
+		.span8
+			.video
+				.video-wrap
+					= render_youtube_video "31pgOcLlCo0"

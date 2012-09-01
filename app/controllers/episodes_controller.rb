@@ -10,6 +10,15 @@ class EpisodesController < ApplicationController
     end
   end
 
+  def stream
+    @episodes = Episode.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @episodes }
+    end
+  end
+
   # GET /episodes/1
   # GET /episodes/1.json
   def show
