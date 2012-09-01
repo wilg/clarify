@@ -15,4 +15,8 @@ group :assets do
   gem 'twitter-bootstrap-rails'
 end
 
+group :test, :development do
+  gem "rspec-rails", ">= 2.0"
+end
+
 gem 'jquery-rails'
