@@ -1,19 +1,16 @@
-= form_for @episode do |f|
-  -if @episode.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@episode.errors.count, "error")} prohibited this episode from being saved:"
-      %ul
-        - @episode.errors.full_messages.each do |msg|
-          %li= msg
-
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :permalink
-    = f.text_field :permalink
-  .field
-    = f.label :description
-    = f.text_area :description
-  .actions
-    = f.submit 'Save'
+= form_for @episode, :html => { :class => 'form-horizontal' } do |f|
+  .control-group
+    = f.label :name, :class => 'control-label'
+    .controls
+      = f.text_field :name, :class => 'text_field'
+  .control-group
+    = f.label :permalink, :class => 'control-label'
+    .controls
+      = f.text_field :permalink, :class => 'text_field'
+  .control-group
+    = f.label :description, :class => 'control-label'
+    .controls
+      = f.text_area :description, :class => 'text_area'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), episodes_path, :class => 'btn'
