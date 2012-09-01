@@ -1,4 +1,5 @@
 Clarify::Application.routes.draw do
+
   resources :episodes
 
   # The priority is based upon order of creation:
