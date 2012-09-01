@@ -16,13 +16,15 @@
 	%body
 		.container
 			%header
-				.clarify-logo
-					%strong Clarify
+				= link_to root_url do
+					.clarify-logo
+						%strong Clarify
+				.tagline A video series of clear, conscise overviews of civics, politics, and policy.
 			.content
 				= bootstrap_flash
 				= yield
 
 			%footer
-				%p &copy; Company 2012
+				%p &copy; 2012 Wil Gieseler
 
 		= javascript_include_tag "application"

@@ -1,7 +1,16 @@
 header
 	margin: 30px
+	text-decoration: none !important
+	.tagline
+		text-align: center
+		font-size: 28px
+		font-style: italic
+		padding: 1em
+		line-height: 1.25em
 
 body
+	background-image: image-url("layout/first-aid-kit-light.jpg")
+	background-position: center
 
 .clarify-logo
 	-webkit-font-smoothing: antialiased
@@ -16,6 +25,13 @@ body
 		+background(linear-gradient(color-stops(#324661, #142c4a)))
 		+border-radius(3px)
 		text-shadow: rgba(0,0,0,0.3) 1px 1px 2px
+
+
+footer
+	padding: 10px
+	text-align: center
+	font-style: italic
+	color: darken(white, 50%)
 
 // 		background-color: #142c4a
 // 				+linear-gradient(color-stops(white, black))
