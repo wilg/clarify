@@ -22,7 +22,7 @@ class EpisodesController < ApplicationController
   # GET /episodes/1
   # GET /episodes/1.json
   def show
-    @episode = Episode.find(params[:id])
+    @episode = params[:slug].present? ? Episode.find_by_permalink(params[:slug]) : Episode.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb

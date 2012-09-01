@@ -8,4 +8,6 @@ Clarify::Application.routes.draw do
 
 	root :to => 'episodes#stream'
 
+	match "/:slug", to: "episodes#show"
+
 end
