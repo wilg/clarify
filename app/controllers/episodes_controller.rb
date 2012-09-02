@@ -1,4 +1,7 @@
 class EpisodesController < ApplicationController
+
+	before_filter :authenticate, except: :soon
+
   # GET /episodes
   # GET /episodes.json
   def index
@@ -17,6 +20,10 @@ class EpisodesController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @episodes }
     end
+  end
+
+  def soon
+
   end
 
   # GET /episodes/1

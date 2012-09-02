@@ -6,7 +6,7 @@ Clarify::Application.routes.draw do
 	match "/embed/:id", as: :youtube_embed, host: "youtube.com", controller: :embed, action: :show
 	match "/video/:id", as: :vimeo_embed, host: "player.vimeo.com", controller: :video, action: :show
 
-	root :to => 'episodes#stream'
+	root :to => 'episodes#soon'
 
 	match "/:slug", to: "episodes#show"
 
